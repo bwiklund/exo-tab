@@ -1,3 +1,3 @@
-# Chrome extension boilerplate
+# exo-tab
 
-A little static site generator built with chrome extensions in mind.
+chrome extension wip
