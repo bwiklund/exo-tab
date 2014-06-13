@@ -5,6 +5,9 @@
   "description": "Foo.",
   "version": "1.0",
 
+  "permissions": [
+    "system.cpu"
+  ],
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   }
