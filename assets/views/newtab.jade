@@ -8,10 +8,9 @@ html
   body(ng-app="newtab" ng-csp)
     .city
     .scratches
-    h1 STATUS
     .cpu-info(ng-controller="CPUCtrl")
       //- div {{info}}
-      .model-name {{info.modelName}}
+      .model-name CPU STATUS - NOMINAL<br>{{info.modelName}}
       .processor(ng-repeat="processor in info.processors track by $index")
         .bar
           .inner(ng-style="processorStyle($index)")
