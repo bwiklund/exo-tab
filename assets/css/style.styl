@@ -43,10 +43,16 @@ body
   background-size cover
 
 
+.ui
+  &:nth-child(2n) .cpu-info
+    -webkit-filter blur(5px)// sepia(100%)// hue-rotate(90deg)
+
+// .ui
 .cpu-info
   position absolute
   top 50px
   left 50px
+
 
   transform rotateY(5deg) rotateZ(1deg)
   transform-origin left
