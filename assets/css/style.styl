@@ -2,6 +2,18 @@
 
 bgClr = #222
 
+@keyframes breathe1
+  from
+    transform translate(0px,0px) scale(1.1,1.1)
+  to
+    transform translate(0px,-10px) scale(1.1,1.1)
+
+@keyframes breathe2
+  from
+    transform translate(0px,0px) scale(1.1,1.1)
+  to
+    transform translate(0px,10px) scale(1.1,1.1)
+
 *
   margin 0
   padding 0
@@ -9,18 +21,27 @@ bgClr = #222
 
 body
   font-family sans-serif
-  background black url(bg.jpg) center center
-  background-size cover
   color white
 
-.scratches
+
+.scratches, .city
   position fixed
   z-index -1
   width 100%
   height 100%
+
+.scratches
+  animation breathe1 3s ease-in-out alternate infinite
   background url(scratches.png) center center
   background-size cover
   opacity 0.2
+
+.city
+  animation breathe2 3s ease-in-out alternate infinite
+  background black url(bg.jpg) center center
+  background-size cover
+
+
 
 h1
   padding 10px
