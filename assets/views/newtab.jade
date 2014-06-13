@@ -11,7 +11,12 @@ html
     .ui(ng-repeat="pass in [1,2]")
       .cpu-info(ng-controller="CPUCtrl")
         //- div {{info}}
-        .model-name CPU STATUS - NOMINAL<br>{{info.modelName}}
-        .processor(ng-repeat="processor in info.processors track by $index")
+        .label CPU STATUS - NOMINAL<br>{{ info.modelName }}
+        .usage(ng-repeat="processor in info.processors track by $index")
           .bar
             .inner(ng-style="processorStyle($index)")
+
+        .label MEMORY USAGE - {{ memoryPercent(memory) | number:0 }}%
+        .usage
+          .bar
+            .inner(ng-style="memoryStyle(memory)")
