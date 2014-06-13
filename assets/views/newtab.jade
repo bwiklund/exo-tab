@@ -9,14 +9,17 @@ html
     .city
     .scratches
     .ui(ng-repeat="pass in [1,2]")
-      .cpu-info(ng-controller="CPUCtrl")
+      .panel.cpu-info(ng-controller="CPUCtrl")
         //- div {{info}}
         .label CPU STATUS - NOMINAL<br>{{ info.modelName }}
-        .usage(ng-repeat="processor in info.processors track by $index")
+        .value.usage(ng-repeat="processor in info.processors track by $index")
           .bar
             .inner(ng-style="processorStyle($index)")
 
         .label MEMORY USAGE - {{ memoryPercent(memory) | number:0 }}%
-        .usage
+        .value.usage
           .bar
             .inner(ng-style="memoryStyle(memory)")
+
+      .panel.weather
+        .label LOCAL CONDITIONS<br>70 AND SUNNY

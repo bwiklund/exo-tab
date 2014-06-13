@@ -52,18 +52,29 @@ body
   position absolute
   top 50px
   left 50px
-
-
   transform rotateY(5deg) rotateZ(1deg)
   transform-origin left
   // background rgba(0,0,0,0.1)
   // border 0px solid rgba(0,0,0,0.3)
   // border-top-width 5px
 
+.weather
+  text-align right
+  position absolute
+  top 50px
+  right 50px
+  transform rotateY(-5deg) rotateZ(-1deg)
+  transform-origin left
+
+
+.panel
+  .label, .value
+    font-size 10px
+    margin 10px
+
   .label
     margin 30px 10px 10px
     text-transform uppercase
-    font-size 10px
 
   .usage
     width 150px
@@ -72,6 +83,6 @@ body
     .bar
       background rgba(0,0,0,0.1)
       border-right 2px solid red
-      margin 10px
+      margin 10px 0
     .inner
       transition 0.1s linear width
